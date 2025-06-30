@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | Foodie Bites</title>
+  <link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="logo">🍴 Foodie Bites</h1>
+      <ul class="nav-links">
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+<header class="hero-section">
+  <div class="hero-content">
+    <div class="hero-box">
+      <h1>Welcome to Foodie Bites 🍲</h1>
+      <p class="subtitle">Serving soul-soothing recipes & flavor-packed stories since 2025</p>
+      <br>
+      <a href="recipes.html" class="hero-button">Explore Recipes</a>
+     
+      
+    </div>
+  </div>
+</header>
+
+
+  <!-- Feature Section -->
+  <section class="features">
+    <h2 class="section-title">Why You'll Love It Here</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>🥄 Easy Recipes</h3>
+        <p>Step-by-step guides using ingredients you already have.</p>
+      </div>
+      <div class="feature-card">
+        <h3>📸 Food Styling Tips</h3>
+        <p>Learn how to make your dishes look Insta-worthy.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🌍 Diverse Flavors</h3>
+        <p>From desi classics to global goodness — all on one plate.</p>
+      </div>
+    </div>
+  </section>
+  <section class="carousel-section">
+  <h2 class="section-title">🔥 Trending Recipes</h2>
+ 
+  <div class="carousel-container">
+   <button class="carousel-btn left" onclick="scrollCarousel(-1)">&#10094;</button>
+
+    <div class="carousel-track" id="carouselTrack">
+       <div class="carousel-card">
+        <img src="https://licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-Chicken-Biryani.jpg" alt="Chicken Biryani">
+        <h3>Chicken Dum Biryani</h3>
+      </div>
+      <div class="carousel-card">
+        <img src="https://images.unsplash.com/photo-1605478642044-b8b2d16f86f5" alt="Paneer Curry">
+        <h3>Spicy Paneer Curry</h3>
+      </div>
+      <div class="carousel-card">
+        <img src="https://images.unsplash.com/photo-1622447036019-b6bafc998d9f" alt="Veggie Pasta">
+        <h3>Loaded Veggie Pasta</h3>
+      </div>
+      <div class="carousel-card">
+        <img src="https://images.unsplash.com/photo-1605478882600-50bcbd84f4d7" alt="Choco Lava Cake">
+        <h3>Choco Lava Cake</h3>
+      </div>
+      <div class="carousel-card">
+        <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb34" alt="Tandoori Roti">
+        <h3>Tandoori Roti & Dal</h3>
+      </div>
+
+<div class="carousel-card">
+  <img src="https://images.unsplash.com/photo-1543353071-873f17a7a088" alt="Berry Pancakes">
+  <h3>Berry Blast Pancakes</h3>
+</div>
+
+<div class="carousel-card">
+  <img src="https://images.unsplash.com/photo-1576402187878-974f56b3c6b1" alt="Biryani Bowl">
+  <h3>Hyderabadi Veg Biryani</h3>
+</div>
+
+<div class="carousel-card">
+  <img src="https://images.unsplash.com/photo-1631515243349-b4ff9a2ce526" alt="Avocado Toast">
+  <h3>Avocado Toast Deluxe</h3>
+</div>
+
+<div class="carousel-card">
+  <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e" alt="Sizzling Brownie">
+  <h3>Sizzling Brownie Fudge</h3>
+</div>
+
+    </div>
+ <button class="carousel-btn right" onclick="scrollCarousel(1)">&#10095;</button>
+  </div>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Foodie Bites. Crafted with passion and paneer ❤️</p>
+  </footer>
+<script>
+  function scrollCarousel(direction) {
+    const track = document.getElementById('carouselTrack');
+    const card = track.querySelector('.carousel-card');
+    if (!card) return;
+
+    const cardWidth = card.offsetWidth + 20; // 20px = gap
+    track.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
+

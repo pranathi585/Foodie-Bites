@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Foodie Bites | Recipes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="nav-container">
+    <h2 class="logo">🍴 Foodie Bites</h2>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="recipes.html">Recipes</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="recipe-search-section">
+  <h2 class="section-title">🍳 Explore Recipes</h2>
+  
+  <div class="search-bar-wrapper">
+    <input type="text" id="recipeSearchInput" placeholder="Search recipes..." onkeyup="filterRecipes()" />
+    <span class="search-icon">🔍</span>
+  </div>
+
+</section>
+
+<section class="dashboard">
+  <h2 class="dashboard-title">🍽️ Browse by Categories</h2>
+  <nav class="category-nav">
+    <ul>
+      <li onclick="filterByTag('all')">All</li>
+      <li onclick="filterByTag('breakfast')">Breakfast</li>
+      <li onclick="filterByTag('lunch')">Lunch</li>
+      <li onclick="filterByTag('dinner')">Dinner</li>
+      <li onclick="filterByTag('snacks')">Snacks</li>
+      <li onclick="filterByTag('drinks')">Drinks</li>
+      <li onclick="filterByTag('dessert')">Dessert</li>
+    </ul>
+  </nav>
+</section>
+
+
+<section class="recipe-gallery">
+  <div class="recipe-grid">
+
+    <div class="recipe-card" data-tag="breakfast">
+      <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2" alt="Pancakes">
+      <h3>Fluffy Pancakes</h3>
+    </div>
+    <div class="recipe-card" data-tag="breakfast drinks">
+      <img src="https://images.unsplash.com/photo-1572441710263-0d786f1554c4" alt="Smoothie Bowl">
+      <h3>Berry Smoothie Bowl</h3>
+    </div>
+    <div class="recipe-card" data-tag="lunch">
+      <img src="https://images.unsplash.com/photo-1589308078050-aa246b1a7271" alt="Veg Wrap">
+      <h3>Grilled Veggie Wrap</h3>
+    </div>
+    <div class="recipe-card" data-tag="lunch">
+      <img src="https://images.unsplash.com/photo-1605478882600-50bcbd84f4d7" alt="Paneer Rice">
+      <h3>Paneer Rice Bowl</h3>
+    </div>
+    <div class="recipe-card" data-tag="dinner">
+      <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141" alt="Chicken Curry">
+      <h3>Hyderabadi Chicken Curry</h3>
+    </div>
+    <div class="recipe-card" data-tag="dinner">
+      <img src="https://images.unsplash.com/photo-1622447036019-b6bafc998d9f" alt="Pasta">
+      <h3>Cheesy White Pasta</h3>
+    </div>
+    <div class="recipe-card" data-tag="snacks">
+      <img src="https://images.unsplash.com/photo-1612197529931-3cc2d92d1945" alt="Nachos">
+      <h3>Loaded Nachos</h3>
+    </div>
+    <div class="recipe-card" data-tag="snacks drinks">
+      <img src="https://images.unsplash.com/photo-1559628238-637d5c3bbf67" alt="Lemon Iced Tea">
+      <h3>Lemon Iced Tea</h3>
+    </div>
+    <div class="recipe-card" data-tag="drinks dessert">
+      <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772" alt="Cold Coffee">
+      <h3>Chocolate Cold Coffee</h3>
+    </div>
+    <div class="recipe-card" data-tag="dessert">
+      <img src="https://images.unsplash.com/photo-1589307004390-59ac3a75c201" alt="Choco Lava Cake">
+      <h3>Choco Lava Cake</h3>
+    </div>
+    <div class="recipe-card" data-tag="breakfast">
+  <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Avocado Toast">
+  <h3>Avocado Toast</h3>
+</div>
+<div class="recipe-card" data-tag="breakfast">
+  <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2" alt="Masala Omelette">
+  <h3>Masala Omelette</h3>
+</div>
+<div class="recipe-card" data-tag="lunch">
+  <img src="https://images.unsplash.com/photo-1630075422126-d979c41a69c5" alt="Rajma Chawal">
+  <h3>Rajma Chawal</h3>
+</div>
+<div class="recipe-card" data-tag="lunch">
+  <img src="https://images.unsplash.com/photo-1603133872878-684f22b3f4aa" alt="Stuffed Paratha">
+  <h3>Stuffed Aloo Paratha</h3>
+</div>
+<div class="recipe-card" data-tag="dinner">
+  <img src="https://images.unsplash.com/photo-1620056203983-78e3044d0e57" alt="Butter Chicken">
+  <h3>Butter Chicken</h3>
+</div>
+<div class="recipe-card" data-tag="dinner">
+  <img src="https://images.unsplash.com/photo-1598133903144-d23571b04286" alt="Fried Rice">
+  <h3>Veg Fried Rice</h3>
+</div>
+<div class="recipe-card" data-tag="snacks">
+  <img src="https://images.unsplash.com/photo-1619441207972-4905e3962d52" alt="Samosa">
+  <h3>Crispy Samosa</h3>
+</div>
+<div class="recipe-card" data-tag="snacks">
+  <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1" alt="Cheese Sandwich">
+  <h3>Grilled Cheese Sandwich</h3>
+</div>
+<div class="recipe-card" data-tag="drinks">
+  <img src="https://images.unsplash.com/photo-1600522453706-07e3c2d83205" alt="Masala Chai">
+  <h3>Masala Chai</h3>
+</div>
+<div class="recipe-card" data-tag="dessert">
+  <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0" alt="Gulab Jamun">
+  <h3>Gulab Jamun</h3>
+</div><div class="recipe-card" data-tag="breakfast">
+  <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Banana Pancakes">
+  <h3>Banana Pancakes</h3>
+</div>
+<div class="recipe-card" data-tag="breakfast">
+  <img src="https://images.unsplash.com/photo-1613145993485-7b4428eb4b63" alt="Upma">
+  <h3>South Indian Upma</h3>
+</div>
+<div class="recipe-card" data-tag="breakfast">
+  <img src="https://images.unsplash.com/photo-1633613286991-6e9cbb2c6b00" alt="Poha">
+  <h3>Kanda Poha</h3>
+</div>
+<div class="recipe-card" data-tag="breakfast">
+  <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8" alt="Idli">
+  <h3>Steamed Idli</h3>
+</div>
+<div class="recipe-card" data-tag="breakfast">
+  <img src="https://images.unsplash.com/photo-1617081601685-4a369d5e90f9" alt="Oats Bowl">
+  <h3>Oats and Fruits Bowl</h3>
+</div>
+
+<div class="recipe-card" data-tag="lunch">
+  <img src="https://images.unsplash.com/photo-1589307004390-59ac3a75c201" alt="Dal Tadka">
+  <h3>Dal Tadka</h3>
+</div>
+<div class="recipe-card" data-tag="lunch">
+  <img src="https://images.unsplash.com/photo-1630593121981-8d2b5e0b4572" alt="Vegetable Biryani">
+  <h3>Vegetable Biryani</h3>
+</div>
+<div class="recipe-card" data-tag="lunch">
+  <img src="https://images.unsplash.com/photo-1640501471874-37ef1fc9eac0" alt="Chole Bhature">
+  <h3>Chole Bhature</h3>
+</div>
+<div class="recipe-card" data-tag="lunch">
+  <img src="https://images.unsplash.com/photo-1581404917879-31b5fe1e3f89" alt="Thali">
+  <h3>North Indian Thali</h3>
+</div>
+<div class="recipe-card" data-tag="lunch">
+  <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0" alt="Fish Curry">
+  <h3>Fish Curry</h3>
+</div>
+
+<div class="recipe-card" data-tag="dinner">
+  <img src="https://images.unsplash.com/photo-1625949895661-3e22632ed20e" alt="Tandoori Roti">
+  <h3>Tandoori Roti & Sabzi</h3>
+</div>
+<div class="recipe-card" data-tag="dinner">
+  <img src="https://images.unsplash.com/photo-1598133675896-96fcacbf7f4a" alt="Mixed Veg Curry">
+  <h3>Mixed Vegetable Curry</h3>
+</div>
+<div class="recipe-card" data-tag="dinner">
+  <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb34" alt="Kofta Curry">
+  <h3>Malai Kofta</h3>
+</div>
+<div class="recipe-card" data-tag="dinner">
+  <img src="https://images.unsplash.com/photo-1592424002057-56a989bd97b6" alt="Dal Makhani">
+  <h3>Dal Makhani</h3>
+</div>
+<div class="recipe-card" data-tag="dinner">
+  <img src="https://images.unsplash.com/photo-1543349686-3df0cf9c2ae4" alt="Jeera Rice & Sabzi">
+  <h3>Jeera Rice Combo</h3>
+</div>
+
+<div class="recipe-card" data-tag="snacks">
+  <img src="https://images.unsplash.com/photo-1633613827852-1127c04b33e3" alt="Vada Pav">
+  <h3>Vada Pav</h3>
+</div>
+<div class="recipe-card" data-tag="snacks">
+  <img src="https://images.unsplash.com/photo-1576402187872-6747a1b178b5" alt="Pakora">
+  <h3>Onion Pakora</h3>
+</div>
+<div class="recipe-card" data-tag="snacks">
+  <img src="https://images.unsplash.com/photo-1607082352349-b76d89fdd52b" alt="Corn Chat">
+  <h3>Masala Corn Chat</h3>
+</div>
+<div class="recipe-card" data-tag="snacks">
+  <img src="https://images.unsplash.com/photo-1627805693360-196e8c1a8d4b" alt="Paneer Tikka">
+  <h3>Paneer Tikka</h3>
+</div>
+<div class="recipe-card" data-tag="snacks">
+  <img src="https://images.unsplash.com/photo-1598970434795-0c54fe7c0642" alt="Bread Roll">
+  <h3>Stuffed Bread Rolls</h3>
+</div>
+
+<div class="recipe-card" data-tag="drinks">
+  <img src="https://images.unsplash.com/photo-1603911221993-5ed8ff1b58fe" alt="Mango Lassi">
+  <h3>Mango Lassi</h3>
+</div>
+<div class="recipe-card" data-tag="drinks">
+  <img src="https://images.unsplash.com/photo-1603052876806-01300892ce4b" alt="Rose Milk">
+  <h3>Chilled Rose Milk</h3>
+</div>
+<div class="recipe-card" data-tag="drinks">
+  <img src="https://images.unsplash.com/photo-1634212259512-e9a7b84846fd" alt="Coconut Water">
+  <h3>Fresh Coconut Water</h3>
+</div>
+<div class="recipe-card" data-tag="drinks">
+  <img src="https://images.unsplash.com/photo-1576618148400-0e5b29ae137d" alt="Aam Panna">
+  <h3>Raw Mango Aam Panna</h3>
+</div>
+<div class="recipe-card" data-tag="drinks">
+  <img src="https://images.unsplash.com/photo-1617084901773-06d0fd7ae43f" alt="Filter Coffee">
+  <h3>South Indian Filter Coffee</h3>
+</div>
+
+<div class="recipe-card" data-tag="dessert">
+  <img src="https://images.unsplash.com/photo-1590080877031-4bfa83b18055" alt="Rasgulla">
+  <h3>Spongy Rasgulla</h3>
+</div>
+<div class="recipe-card" data-tag="dessert">
+  <img src="https://images.unsplash.com/photo-1620599371031-c53d1bb54f24" alt="Rasmalai">
+  <h3>Creamy Rasmalai</h3>
+</div>
+<div class="recipe-card" data-tag="dessert">
+  <img src="https://images.unsplash.com/photo-1588769322434-134c1234f622" alt="Ice Cream">
+  <h3>Vanilla Ice Cream</h3>
+</div>
+<div class="recipe-card" data-tag="dessert">
+  <img src="https://images.unsplash.com/photo-1606731023496-9241b556872b" alt="Kheer">
+  <h3>Rice Kheer</h3>
+</div>
+<div class="recipe-card" data-tag="dessert">
+  <img src="https://images.unsplash.com/photo-1590080877167-7a6edb679726" alt="Carrot Halwa">
+  <h3>Gajar Ka Halwa</h3>
+</div>
+
+
+</section>
+
+<footer>
+  <p>&copy; 2025 Foodie Bites. All rights reserved.</p>
+</footer>
+
+<!-- JS -->
+<script>
+  function filterByTag(tag) {
+    const cards = document.querySelectorAll(".recipe-card");
+    cards.forEach(card => {
+      const tags = card.dataset.tag.toLowerCase();
+      card.style.display = tag === "all" || tags.includes(tag) ? "block" : "none";
+    });
+
+    document.getElementById("recipeSearchInput").value = "";
+
+    // Highlight selected category in nav bar
+    document.querySelectorAll(".category-nav li").forEach(li => {
+      li.classList.remove("active");
+      if (li.textContent.toLowerCase() === tag) {
+        li.classList.add("active");
+      }
+    });
+  }
+</script>
+
+
+</body>
+</html>
